@@ -17,5 +17,9 @@ class BooksController < ApplicationController
     def destroy
     end
 
+    def serch
+    end
+    
+
 
 end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'home#about'
+  root 'home#login'
+  get '/about', to: 'home#about'
   get '/auth/twitter/callback', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  get '/update', to: 'sessions#update'
+  delete '/logout', to: 'sessions#destroy'
   resources :books
 end
