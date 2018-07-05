@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about'
   get '/auth/twitter/callback', to: 'sessions#create'
   get '/update', to: 'sessions#update'
+  get '/search', to: 'books#search'
   delete '/logout', to: 'sessions#destroy'
   resources :books
 end

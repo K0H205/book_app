@@ -45,6 +45,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    amazon-ecs (2.5.0)
+      nokogiri (~> 1.4)
+      ruby-hmac (~> 0.3)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -338,6 +341,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    ruby-hmac (0.4.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.6)
@@ -397,6 +401,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  amazon-ecs
   bootsnap (>= 1.1.0)
   bootstrap-sass (= 3.3.7)
   byebug

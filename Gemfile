@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'amazon-ecs'
 gem 'bootstrap-sass', '3.3.7'
 
 group :development, :test do
