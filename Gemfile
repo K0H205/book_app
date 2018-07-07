@@ -15,6 +15,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'amazon-ecs'
 gem 'bootstrap-sass', '3.3.7'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

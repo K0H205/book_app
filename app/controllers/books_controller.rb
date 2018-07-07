@@ -1,11 +1,11 @@
 class BooksController < ApplicationController
 
     def create
-
+        # @book = Book.create(title: title)
     end
 
     def index
-        @user =User.find_by(id:session[:user_id])
+        # @user =User.find_by(id:session[:user_id])
     end
 
     def new
