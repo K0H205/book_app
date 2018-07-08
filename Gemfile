@@ -14,7 +14,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'amazon-ecs'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap', '~> 4.1.1'
 gem 'dotenv-rails'
 
 group :development, :test do
