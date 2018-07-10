@@ -1,12 +1,11 @@
 class BooksController < ApplicationController
+  def create
+    @book = Book.create(book_params)
+  end
 
-    def create
-        # @book = Book.create(title: title)
-    end
+  def index
 
-    def index
-        # @user =User.find_by(id:session[:user_id])
-    end
+  end
 
     def new
     end
@@ -32,14 +31,19 @@ class BooksController < ApplicationController
           # 本のタイトル,画像URL, 詳細ページURLの取得
           @books = []
           books.items.each do |item|
-            book = Searches.new(
-              item.get('ItemAttributes/Title'),
-              item.get('LargeImage/URL'),
-              item.get('DetailPageURL'),
+            book = Book.new(
+              title: item.get('ItemAttributes/Title'),
+              image_url: item.get('LargeImage/URL'),
+              url: item.get('DetailPageURL'),
             )
             @books << book
           end
         end
+      end
+
+      private
+      def book_params
+        params.require(:book).permit(:title,:image_url,:url)
       end
     
 
