@@ -1,5 +1,8 @@
 <header class="header">
-<%= link_to "LOGOUT",logout_path,method: :delete %>
-<%= link_to "Twitter情報更新",'/update' %>
-<li><%= link_to 'Twitterでログインしてスタート', '/auth/twitter' %></li>
+<% if logged_in? %>
+  <ul>
+    <li><%= link_to "LOGOUT",logout_path,method: :delete %></li>
+    <li><%= link_to "MYBOOK",books_path(@current_user.id) %></li>
+  </ul>
+  <% end %>
 </header>

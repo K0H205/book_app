@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :logged_in_user, only:[:search]
 
   def create
     @book = current_user.books.build(book_params)
@@ -9,16 +10,16 @@ class BooksController < ApplicationController
   end
 
   def index
+    
   end
 
   def destroy
+
   end
 
   def search
       if params[:keyword].present?
-        #　デバックログ出力するために記述
-        Amazon::Ecs.debug = true
-  
+
         # Amazon::Ecs::Responceオブジェクトの取得
         books = Amazon::Ecs.item_search(
           params[:keyword],
@@ -45,7 +46,6 @@ class BooksController < ApplicationController
   private
 
     def book_params
-      #user_id属性以外は変更可能
       params.require(:book).permit(:title,:image_url,:url)
     end
     
