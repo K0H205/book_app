@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/search', to: 'books#search'
   delete '/logout', to: 'sessions#destroy'
   resources :books
+  resources :users
 end

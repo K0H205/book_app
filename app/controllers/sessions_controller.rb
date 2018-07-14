@@ -15,9 +15,4 @@ class SessionsController < ApplicationController
       redirect_to root_path
       end
     end
-
-    # def update
-    #   user = User.reload(request.env['omniauth.auth'])
-    #   redirect_to request.referrer || root_url
-    # end
   end

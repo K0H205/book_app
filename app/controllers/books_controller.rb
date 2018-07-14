@@ -5,21 +5,21 @@ class BooksController < ApplicationController
     @book = current_user.books.build(book_params)
 
     if @book.save
-      redirect_to root_path
+      flash[:success] = "本を登録しました"
+      redirect_to user_path(@current_user)
     end
   end
 
-  def index
-    
-  end
-
   def destroy
-
+    Book.find(params[:id]).destroy
+    flash[:success] = "登録した本を削除しました"
+    redirect_to request.referrer || root_url
   end
 
   def search
-      if params[:keyword].present?
-
+    if params[:keyword].present?
+      retry_count = 0
+      begin
         # Amazon::Ecs::Responceオブジェクトの取得
         books = Amazon::Ecs.item_search(
           params[:keyword],
@@ -29,7 +29,14 @@ class BooksController < ApplicationController
           country:  'jp',
           power: "Not kindle"
         )
-  
+      rescue => e
+        retry_count += 1
+        logger.error e.message
+        if retry_count < 5
+          sleep(2)
+          retry
+        end
+    end
         # 本のタイトル,画像URL, 詳細ページURLの取得
         @books = []
         books.items.each do |item|
