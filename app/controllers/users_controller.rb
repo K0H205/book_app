@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-
+    User.find(params[:id]).destroy
+    flash[:success] = "登録情報を削除し、退会完了しました"
+    redirect_to request.referrer || root_url
   end
 
 end

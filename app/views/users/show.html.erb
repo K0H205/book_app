@@ -1,14 +1,9 @@
-<p>
-<%= @user.name %>
-<%= "@#{@user.nickname}"%>
-<%= image_tag  @user.image_url %>
-</p>
-<p>
-<% @books.each do |book| %>
-  <div class="list">
-    <%= link_to (image_tag(book.image_url, style: "width: 70px;height: 100px;display: inline-block;")), book.url %>
-    <%= book.title%>
-    <%= button_to  "削除", book, method: :delete, data: { confirm: "この本を削除しますか？" }%>
-  </div>
-<% end %>
-</p>
+<div id='book_list' >
+  <%= @user.name %>
+  <%= "@#{@user.nickname}"%>
+  <%= image_tag  @user.image_url %>
+  <%= link_to "退会はこちらをクリック", @user , :method => :delete %>
+</div>
+<div id='book_list'>
+  <%= render 'users/list' %>
+</div>
