@@ -27,6 +27,7 @@ group :development do
   gem 'sqlite3', '1.3.13'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'faker'       
 end
 
 group :production do

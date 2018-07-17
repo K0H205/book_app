@@ -1,5 +1,6 @@
 <% @users.each do |user|%>
-  <%= user.name %>
-  <%= image_tag  user.image_url %>
-  <%= link_to  "Twitterアカウントを見に行く", "https://twitter.com/#{user.nickname}" %>
+  <%= link_to user.name, user %>
+  <%= "@#{user.nickname}" %>
+  <%= image_tag user.image_url %>
+  <%= link_to  "Twitterアカウント見に行く", "https://twitter.com/#{user.nickname}" %>
 <% end %>
