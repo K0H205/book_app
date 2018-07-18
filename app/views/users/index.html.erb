@@ -1,3 +1,4 @@
+<%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 <% @users.each do |user|%>
   <%= link_to user.name, user %>
   <%= "@#{user.nickname}" %>
