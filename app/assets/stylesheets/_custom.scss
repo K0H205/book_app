@@ -31,6 +31,20 @@ body {
 // .search-box{
 //   display: float;
 // }
+.contents_item_number {
+  ul {
+    list-style: none;
+    li{
+      list-style: outside decimal;
+      li{
+        list-style: none;
+      }
+    }
+  }
+}
+ul {
+  list-style: none;
+}
 
 .footer {
   position: absolute;

@@ -1,11 +1,8 @@
 <footer class="footer">
   <ul class="footer-wrap">
-    <li><%= link_to 'このサイトについて','' %></li>
-    <li><%= link_to '利用規約','' %></li>
-    <li><%= link_to 'プライバシーポリシー','' %></li>
-    <li><%= link_to 'お問い合わせ','' %></li>
-    <li><%= link_to '公式Twitter',''%></li>
-    <%= link_to "退会はこちらをクリック", @user , :method => :delete %>
+    <li><%= link_to 'このサイトについて', root_path %></li>
+    <li><%= link_to '利用規約','/agreement' %></li>
+    <li><%= link_to 'お問い合わせ','/contact' %></li>
   </ul>
-  <p>©︎2018 Rebook運営 <a href="https://twitter.com/mwkpgdjp">@水谷</a></p>
+  <p>©2018 リブック createdby<a href="https://twitter.com/mwkpgdjp">@水谷</a></p>
 </footer>
