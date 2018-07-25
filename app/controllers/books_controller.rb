@@ -38,17 +38,17 @@ class BooksController < ApplicationController
   def create
     @book = current_user.books.build(book_params)
     if @book.save
-      flash[:success] = "本を登録しました"
+      flash[:info] = "本を登録しました"
       redirect_to user_path(@current_user)
     else 
-      flash[:success] = "登録に失敗しました"
+      flash[:info] = "登録に失敗しました"
       redirect_to request.referrer || root_url
     end
   end
 
   def destroy
     Book.find(params[:id]).destroy
-    flash[:success] = "登録した本を削除しました"
+    flash[:info] = "登録した本を削除しました"
     redirect_to request.referrer || root_url
   end
   
