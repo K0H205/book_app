@@ -1,15 +1,12 @@
 class HomeController < ApplicationController
     
-  def about
-  end
-
   def contact
   end
 
-  def agreement
+  def terms
   end
   
-  def login
+  def home
   end
 
 end

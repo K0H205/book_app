@@ -4,7 +4,7 @@ def create
   user = User.find_or_create_from_auth(request.env['omniauth.auth'])     
   if session[:user_id] = user.id
     flash[:info] = "Twitter認証しました。"
-    redirect_to '/search'
+    redirect_to search_path
   else
     redirect_to root_path
   end
