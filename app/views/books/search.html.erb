@@ -1,11 +1,11 @@
 <% provide(:title, '本検索/登録') %>
-<div id="search-box">
-  <%= form_tag('/search', method: :get) do %>
+<div class ="search_bx">
+  <%= form_tag(search_path, method: :get) do %>
     <%= text_field_tag :book, "",  id: "book_search", name: "keyword", placeholder: "キーワードを入力"%>
     <button title="検索" type="submit">検索</button>
   <% end %>
 </div>
-<div id='list'>
+<div class="book_lst">
   <%= render 'books/list' %>
 </div>
 

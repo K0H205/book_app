@@ -1,14 +1,18 @@
 <% if @books.present? %>
   <% @books.each do |book| %>
-    <div class="list">
-      <%= link_to (image_tag(book.image_url, style: "width: 70px;height: 100px;display: inline-block;")), book.url %>
-      <%= book.title %>
-      <%= form_with model: @books, url: '/books' do |f| %>
-        <%= f.hidden_field :title, value: book.title %>
-        <%= f.hidden_field :url, value: book.url %>
-        <%= f.hidden_field :image_url, value: book.image_url %>
-        <%= f.submit '登録', data: { confirm: "この本を登録しますか？" }%>
-      <% end %>
-    </div>
+  <div class="book_bx">
+      <%= link_to image_tag(book.image_url), book.url %>
+        <div class="book_ttl">
+          <%= book.title %>
+        </div>
+        <div class="book_btn">
+          <%= form_with model: @books, url: '/books' do |f| %>
+            <%= f.hidden_field :title, value: book.title %>
+            <%= f.hidden_field :url, value: book.url %>
+            <%= f.hidden_field :image_url, value: book.image_url %>
+            <%= f.submit '登録', data: { confirm: "この本を登録しますか？" }, :class => "btn btn-info"%>
+          <% end %>
+        </div>
+      </div>
   <% end %>
 <% end %>

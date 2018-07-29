@@ -1,8 +1,10 @@
 <% provide(:title, 'マイページ') %>
-<div id='userpanel' >
-  <%= @user.name %>
-  <%= image_tag  @user.image_url %>
-</div>
-<div id='list'>
-  <%= render 'users/list' %>
+<div class="usershw">
+  <div class="usershw_pnl" >
+    <%= @user.name %>
+    <%= image_tag  @user.image_url %>
+  </div>
+  <div class='book_lst'>
+    <%= render 'users/list' %>
+  </div>
 </div>

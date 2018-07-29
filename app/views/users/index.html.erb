@@ -1,8 +1,12 @@
 <% provide(:title, 'ユーザー一覧') %>
-<%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
-<% @users.each do |user|%>
-  <%= link_to user.name, user %>
-  <%= "@#{user.nickname}" %>
-  <%= image_tag user.image_url %>
-  <%= link_to  "Twitterアカウント見に行く", "https://twitter.com/#{user.nickname}" %>
-<% end %>
+<div class="user_lst">
+  <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  <% @users.each do |user|%>
+    <div class="user_pnl">
+      <%= image_tag user.image_url %>
+      <%= link_to user.name, user %>
+      <%= link_to  "Twitter ->", "https://twitter.com/#{user.nickname}" %>
+    </div>
+  <% end %>
+  <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>
