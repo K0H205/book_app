@@ -7,7 +7,8 @@
       <li>・Email: hrswkhd@gmail.com</li>
       <li><a href="https://twitter.com/mwkpgdjp">・製作者Twitterアカウント</a></li>
     </ul>
-    <li>退会をご希望の方は以下からお願いします。</li>
-    <li><%= button_to "退会", @user, :method => :delete %></li>
+    <% if logged_in? %>
+      <li>退会をご希望の方は<span><%= link_to "こちら", user_path(@current_user.id), method: :delete, data: { confirm: "退会しますか？" } %></span>からお願いします。</li>
+    <% end %>
   </ul>
 </div>

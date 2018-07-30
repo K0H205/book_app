@@ -13,8 +13,15 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:info] = "登録情報を削除し、退会完了しました"
-    redirect_to request.referrer || root_url
+    flash[:info] = "全ての登録情報を削除し、退会完了いたしました"
+    redirect_to root_url
   end
 
+  private
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to users_path unless @user == @current_user
+    end
+    
 end
