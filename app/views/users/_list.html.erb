@@ -1,13 +1,15 @@
-<% @books.each do |book| %>
-  <div class="book_bx">
-    <%= link_to image_tag(book.image_url), book.url %>
-    <div class="book_ttl">
-      <%= book.title %>
+<%= will_paginate @books, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  <% @books.each do |book| %>
+    <div class="book_bx">
+      <%= link_to image_tag(book.image_url), book.url %>
+      <div class="book_ttl">
+        <%= book.title %>
+      </div>
+      <div class="book_btn">
+        <% if currentuser_correct? %>
+          <%= link_to  "削除", book, method: :delete, :class => "btn btn-info", data: { confirm: "この本を削除しますか？" } %>
+        <% end %>
+      </div>    
     </div>
-    <div class="book_btn">
-      <% if currentuser_correct? %>
-        <%= button_to  "削除", book, method: :delete, :class => "btn btn-info", data: { confirm: "この本を削除しますか？" } %>
-      <% end %>
-    </div>    
-  </div>
-<% end %>
+  <% end %>
+<%= will_paginate @books, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

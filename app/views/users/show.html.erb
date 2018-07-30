@@ -3,6 +3,9 @@
   <div class="usershw_pnl" >
     <%= @user.name %>
     <%= image_tag  @user.image_url %>
+    <% if currentuser_correct? %>
+      <%= link_to "本を登録する", search_path, :class => "btn btn-info"%>
+    <% end %>
   </div>
   <div class='book_lst'>
     <%= render 'users/list' %>

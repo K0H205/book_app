@@ -23,6 +23,15 @@ body {
   max-width: 500px;
 }
 
+.usershw_pnl{
+  display: -webkit-inline-box;
+  border: groove;
+  background-color: ghostwhite;
+  .btn{
+    
+  }
+}
+
 .book_lst{
   margin:1rem;
   .book_bx{
