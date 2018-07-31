@@ -3,9 +3,30 @@ html {
   font-size: 16px;
 }
 body {
-  background:#DDDDDD;
   font-weight: bold;
   font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+}
+header{
+  background:#f5f5f5;
+  a{
+    color: black;
+  }
+  .navbar-toggler{
+    color: black;
+  }
+}
+
+footer{
+  background:#f5f5f5;
+  .navber-brand{
+    font-family: sans-serif;
+  }
+  li{
+    margin-right: 20px;
+  }
+  a{
+    color:black;
+  }
 }
 
 .row{
@@ -22,13 +43,25 @@ body {
   margin: 0 auto;
   max-width: 500px;
 }
+.user_lst{
+
+}
 
 .usershw_pnl{
   display: -webkit-inline-box;
   border: groove;
-  background-color: ghostwhite;
+  background:#f5f5f5;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 500px;
+  .user_nm{
+    margin: 0.5rem;
+  }
+  img{
+    margin: .5rem;
+  }
   .btn{
-    
+
   }
 }
 
@@ -41,7 +74,7 @@ body {
     flex-direction: column;
     display: inline-table;
     border: groove;
-    background-color: ghostwhite;
+    background:#f5f5f5;
     img{
       width: 15rem;
     }
@@ -58,7 +91,7 @@ body {
 .user_pnl{
   margin:1rem;
   border: groove;
-  background-color: ghostwhite;
+  background:#f5f5f5;
 }
 
 .contents_item_number {
@@ -77,9 +110,6 @@ ul {
   list-style: none;
 }
 
-.footer li{
-    margin-right: 20px;
-}
 
 .mx-auto{
   width: 25rem;
