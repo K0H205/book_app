@@ -3,29 +3,26 @@ html {
   font-size: 16px;
 }
 body {
-  font-weight: bold;
+  margin: 0 auto;
+  max-width: 877px;
   font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
 }
+
 header{
   background:#f5f5f5;
-  a{
-    color: black;
-  }
-  .navbar-toggler{
-    color: black;
-  }
 }
 
 footer{
   background:#f5f5f5;
-  .navber-brand{
-    font-family: sans-serif;
-  }
   li{
     margin-right: 20px;
   }
   a{
     color:black;
+  }
+  p{
+    margin-bottom: 0em;
+    text-align: center;
   }
 }
 
@@ -109,11 +106,4 @@ footer{
 ul {
   list-style: none;
 }
-
-
-.mx-auto{
-  width: 25rem;
-}
-
-
 
