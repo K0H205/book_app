@@ -1,12 +1,14 @@
 <% provide(:title, "#{@user.name}さんのページ" )%>
-<div class="usershw_pnl" >
-  <div class="user_nm">
-    <%= @user.name %>
-  </div> 
+<div class="usershw_pnl">
   <%= image_tag  @user.image_url %>
-    <!--<% if currentuser_correct? %>-->
-      <!--<%= link_to "本を登録する", search_path, :class => "btn btn-info"%>-->
-    <!--<% end %>-->
+  <%= @user.name %>
+  <!--<% if currentuser_correct? %>
+     <%= link_to "本を登録する", search_path, :class => "btn btn-info"%>
+  <% end %>-->
+  <%= content_tag :span, @user.books.count, class: "fa fa-book" %>
+  <%= link_to "https://twitter.com/#{@user.nickname}" do%>
+    twitter<i class="fa fa-external-link""></i>
+  <% end %>
 </div>
 <div class='book_lst'>
   <%= render 'users/list' %>

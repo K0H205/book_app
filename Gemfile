@@ -19,6 +19,7 @@ gem 'dotenv-rails'
 gem 'will_paginate',           '3.1.6'
 gem 'will_paginate-bootstrap4'
 gem 'jquery-rails'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

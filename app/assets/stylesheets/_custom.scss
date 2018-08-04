@@ -56,15 +56,38 @@ footer{
   }
 }
 
-
-
 .search_bx{
   width: 80%;
   margin: 0 auto;
   max-width: 500px;
 }
-.user_lst{
 
+.user_lst{
+  max-width: 55rem;
+  margin: 0 auto;
+  text-align: center;
+  .pagination{
+    display: inline-flex;
+  }
+  .user_pnl{
+    margin:1rem;
+    padding: 0.5rem;
+    width: 30rem;
+    text-align: start;
+    align-items: center;
+    border: groove;
+    background:#f5f5f5;
+    .twitter_link{
+      padding-top: 0.6rem;
+      float: right;
+    }
+    a{
+      text-decoration: underline;
+      i{
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .usershw_pnl{
@@ -72,12 +95,19 @@ footer{
   display: -webkit-inline-box;
   border: groove;
   background:#f5f5f5;
-  .user_nm{
-    margin: 1.1rem;
+  padding: 0.5em;
+  a{
+    text-decoration: underline;
+    i{
+      text-decoration: underline;
+    }
   }
-  img{
-    margin: .5rem;
-  }
+  // .user_nm{
+  //   margin: 1.1rem;
+  // }
+  // img{
+  //   margin: .5rem;
+  // }
 }
 
 .book_lst{
@@ -104,11 +134,8 @@ footer{
   }
 }
 
-.user_pnl{
-  margin:1rem;
-  border: groove;
-  background:#f5f5f5;
-}
+
+
 .contents_title{
 height: auto;
 }

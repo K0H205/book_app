@@ -5,7 +5,12 @@
     <div class="user_pnl">
       <%= image_tag user.image_url %>
       <%= link_to user.name, user %>
-      <%= link_to  "Twitter ->", "https://twitter.com/#{user.nickname}" %>
+      <%= content_tag :span, user.books.count, class: "fa fa-book" %>
+      <div class="twitter_link">
+        <%= link_to "https://twitter.com/#{user.nickname}" do%>
+          twitter<i class="fa fa-external-link""></i>
+        <% end %>
+      </div>
     </div>
   <% end %>
   <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

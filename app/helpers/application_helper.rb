@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(page_title = '')
-    base_title = "membo"
+    base_title = "rebook"
     if page_title.empty?
       base_title
     else
