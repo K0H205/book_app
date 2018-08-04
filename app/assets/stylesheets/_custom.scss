@@ -49,17 +49,35 @@ footer{
   }
   .home_item{
     position: absolute;
-    color: white;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
     text-align: center;
+    line-height: 4rem;
+    color: palegoldenrod;
   }
 }
 
-.search_bx{
-  width: 80%;
+.search_box{
+  max-width: 55rem;
   margin: 0 auto;
-  max-width: 500px;
+  form{
+    display: flex;
+    height: 3rem;
+    #book{
+      width: 22rem;
+    }
+    button{
+      cursor: pointer;
+      i{
+        align-items: center;
+      }
+    }
+  }
 }
 
 .user_lst{
@@ -102,12 +120,6 @@ footer{
       text-decoration: underline;
     }
   }
-  // .user_nm{
-  //   margin: 1.1rem;
-  // }
-  // img{
-  //   margin: .5rem;
-  // }
 }
 
 .book_lst{
@@ -134,11 +146,10 @@ footer{
   }
 }
 
-
-
 .contents_title{
 height: auto;
 }
+
 .contents_item{
   height: auto;
 }
