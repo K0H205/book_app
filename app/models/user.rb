@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   has_many :books, dependent: :destroy
   validates :name, presence: true
   validates :nickname, presence: true
@@ -16,4 +17,5 @@ class User < ApplicationRecord
       user.image_url = image_url
     end
   end
+  
 end

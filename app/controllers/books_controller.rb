@@ -6,7 +6,6 @@ class BooksController < ApplicationController
     if params[:keyword].present?
       retry_count = 0
       begin
-        # Amazon::Ecs::Responceオブジェクトの取得
         books = Amazon::Ecs.item_search(
           params[:keyword],
           search_index:  'Books',
@@ -23,7 +22,6 @@ class BooksController < ApplicationController
           retry
         end
     end
-        # 本のタイトル,画像URL, 詳細ページURLの取得
         @books = []
         books.items.each do |item|
           book = current_user.books.build(
