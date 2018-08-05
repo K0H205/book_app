@@ -10,7 +10,7 @@
             <%= f.hidden_field :title, value: book.title %>
             <%= f.hidden_field :url, value: book.url %>
             <%= f.hidden_field :image_url, value: book.image_url %>
-            <%= f.submit '登録', data: { confirm: "この本を登録しますか？" }, :class => "btn btn-info" %>
+            <%= f.submit '登録', data: { confirm: "この本(#{book.title})を登録しますか？" }, :class => "btn btn-info" %>
           <% end %>
         </div>
       </div>
