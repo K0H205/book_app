@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
     end 
     if log_in user
       flash[:info] = "Twitter認証しました"
-      redirect_to search_path
+      redirect_to user
     else
       redirect_to root_path
     end
