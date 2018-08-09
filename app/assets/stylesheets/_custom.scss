@@ -63,24 +63,6 @@ footer{
   }
 }
 
-.search_bx{
-  max-width: 20rem;
-  margin: 0 auto;
-  form{
-    display: flex;
-    height: 3rem;
-    #book{
-      width: 16rem;
-    }
-    button{
-      cursor: pointer;
-      i{
-        align-items: center;
-      }
-    }
-  }
-}
-
 .user_lst{
   max-width: 55rem;
   margin: 0 auto;
@@ -170,5 +152,13 @@ height: auto;
 
 ul {
   list-style: none;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.form-control{
+  width: 80%
 }
 
