@@ -19,9 +19,9 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <%= form_tag search_path, method: :get do %>
-              <%= text_field_tag :book, "", name: "keyword", placeholder: "本のタイトルを入力", class: "form-control" %>
-              <%= button_tag :type => "submit", class: "btn btn-outline-dark my-2 my-sm-0" do %><i class="fa fa-search"></i><% end %>
+            <%= form_with(url: search_path, model: @book, method: :get, local: true) do |form| %>
+              <%= form.text_field :book, name: "keyword", :placeholder => "キーワードを入力" %>
+              <%= button_tag :type => "submit" do %><i class="fa fa-search"></i><% end %>  
             <% end %>
           </form>
         <% else %>
