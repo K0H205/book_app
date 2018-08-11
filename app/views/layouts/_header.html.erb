@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container">
-      <%= link_to "rebook", root_path, :class => "navbar-brand" %>
+      <%= link_to "rebook", root_path, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,28 +9,26 @@
         <% if logged_in? %>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <%= link_to "MYPAGE", user_path(@current_user.id), :class => "nav-link" %>
+              <%= link_to "MYPAGE", user_path(@current_user.id), class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "USERS", users_path, :class => "nav-link" %>
+              <%= link_to "USERS", users_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "LOGOUT", logout_path, method: :delete, :class => "nav-link" %>
+              <%= link_to "LOGOUT", logout_path, method: :delete, class: "nav-link" %>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <%= form_with(url: search_path, model: @book, method: :get, local: true) do |form| %>
-              <%= form.text_field :book, name: "keyword", :placeholder => "キーワードを入力" %>
-              <%= button_tag :type => "submit" do %><i class="fa fa-search"></i><% end %>  
+            <%= form_with(url: search_path, method: :get, class: "form-inline my-2 my-lg-0", local: true) do |f| %>
+              <%= f.text_field :keyword, class: "form-control" %>
+              <%= button_tag type: "submit", class: "btn btn-outline-dark my-2 my-sm-0" do %><i class="fa fa-search"></i><% end %>  
             <% end %>
-          </form>
         <% else %>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <%= link_to 'LOGIN', '/auth/twitter', :class => "nav-link" %>
+              <%= link_to 'LOGIN', '/auth/twitter', class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "USERS", users_path, :class => "nav-link" %>
+              <%= link_to "USERS", users_path, class: "nav-link" %>
             </li>
           </ul>
         <% end %>
