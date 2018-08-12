@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-light">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top slide-header">
     <div class="container">
       <%= link_to "rebook", root_path, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,3 +36,18 @@
     </div>
   </nav>
 </header>
+
+<script>
+$(function(){
+  var startPos = 0;
+  $(window).scroll(function(){
+    var currentPos = $(this).scrollTop();
+    if (currentPos > startPos) {
+      $('.slide-header').addClass('hide');
+    } else {
+      $('.slide-header').removeClass('hide');
+    }
+    startPos = currentPos;
+  });
+});
+</script>
