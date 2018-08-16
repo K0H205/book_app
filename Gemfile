@@ -16,7 +16,7 @@ gem 'omniauth-twitter'
 gem 'amazon-ecs'
 gem 'bootstrap', '~> 4.1.1'
 gem 'dotenv-rails'
-gem 'will_paginate',           '3.1.6'
+gem 'will_paginate', '3.1.6'
 gem 'will_paginate-bootstrap4'
 gem 'jquery-rails'
 gem "font-awesome-rails"
@@ -28,14 +28,14 @@ end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'sqlite3', '1.3.13'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'faker'       
+  gem 'faker'
+  gem 'mysql2', '0.5.2'     
 end
 
 group :production do
-  gem 'pg', '0.20.0'
+  gem 'mysql2', '0.5.2' 
   gem 'fog', '1.42'
 end
 
