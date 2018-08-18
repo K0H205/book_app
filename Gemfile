@@ -36,7 +36,8 @@ end
 
 group :production do
   gem 'mysql2', '0.5.2' 
-  gem 'fog', '1.42'
+  gem 'fog-aws'
+  gem 'unicorn'
 end
 
 group :test do
