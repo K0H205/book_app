@@ -5,8 +5,11 @@ body {
   
 }
 
+header{
+  background-color: #f5f5f5;
+}
+
 footer{
-  background:#f5f5f5;
   li{
     margin-right: 20px;
   }
@@ -23,18 +26,6 @@ footer{
   max-width: 55rem;
   margin: 5rem auto 0.5rem;
 }
-
-.slide-header{
-  background:#f5f5f5;
-  top: 0;
-  transition: .5s;
-  z-index: 999;
-}
-.slide-header.hide{
-  transform: translateY(-100%);
-}
-
-
 
 .alert-info{
   margin-top: 2rem;
@@ -82,11 +73,15 @@ footer{
     max-width: 26rem;
     text-align: start;
     align-items: center;
-    border: groove;
     background:#f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.08);
     .twitter_link{
       padding-top: 0.6rem;
       float: right;
+    }
+    img{
+      border-radius: 50%;
     }
     a{
       text-decoration: underline;
@@ -100,10 +95,14 @@ footer{
 .usershw_pnl{
   margin-left: 2rem;
   display: -webkit-inline-box;
-  border: groove;
   background:#f5f5f5;
   padding: 0.5em;
-  height: 4.5rem;
+  height: 4rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.08);
+  img{
+    border-radius: 50%;
+  }
   a{
     text-decoration: underline;
     i{
@@ -121,7 +120,9 @@ footer{
     -webkit-flex-direction: column;
     flex-direction: column;
     display: inline-table;
-    border: ridge;
+    border-radius: 7px;
+    border: 2px solid lightgray;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.08);
     background:#f5f5f5;
     img{
       width: 15rem;
@@ -167,3 +168,13 @@ ul {
 .form-control{
   width: 80%
 }
+
+// .slide-header{
+//   background:#f5f5f5;
+//   top: 0;
+//   transition: .5s;
+//   z-index: 999;
+// }
+// .slide-header.hide{
+//   transform: translateY(-100%);
+// }
