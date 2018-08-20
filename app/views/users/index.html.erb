@@ -1,6 +1,5 @@
 <% provide(:title, 'ユーザー一覧') %>
 <div class="user_lst">
-  <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
   <% @users.each do |user| %>
     <div class="user_pnl">
       <%= image_tag user.image_url %>
