@@ -25,6 +25,7 @@ footer{
 .main{
   max-width: 55rem;
   margin: 5rem auto 0.5rem;
+  min-height: calc(100vh - 150px);
 }
 
 .alert-info{
@@ -168,6 +169,8 @@ ul {
 .form-control{
   width: 80%
 }
+
+
 
 // .slide-header{
 //   background:#f5f5f5;
