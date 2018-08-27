@@ -28,6 +28,6 @@ production:
   database: rebook_production
   pool: 5
   username: root
-  password: %#hrswkhd0205
+  password: mydbinstancepass
   socket: /var/lib/mysql/mysql.sock
   host: mydbinstance.cc7ve1gnzypb.ap-northeast-1.rds.amazonaws.com
